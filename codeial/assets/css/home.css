@@ -1,0 +1,38 @@
+body {
+  background-color: lightgray; }
+
+#commentss {
+  color: blue; }
+
+#comments-section {
+  color: red; }
+
+#place-comment {
+  width: 300px;
+  height: 40px; }
+
+#adding-comment {
+  background-color: black;
+  color: white;
+  height: 25px;
+  width: 110px;
+  border-radius: 20px 20px;
+  cursor: pointer; }
+
+#home-container {
+  display: flex; }
+
+#feed-posts {
+  width: 70%;
+  padding: 10px; }
+
+#user-friends {
+  width: 30%;
+  margin-left: 390px;
+  text-align: center;
+  margin-right: -100px;
+  height: 950px;
+  margin-top: -90px; }
+
+.friendss {
+  margin-left: -100px; }

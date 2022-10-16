@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="/css/user_sign_up.css">
+<div class="container">
+	<div class="bird-container bird-container--one">
+		<div  class="bird bird--one"></div>
+	</div>
+	
+	<div class="bird-container bird-container--two">
+		<div  class="bird bird--two"></div>
+	</div>
+	
+	<div class="bird-container bird-container--three">
+		<div  class="bird bird--three"></div>
+	</div>
+	
+	<div class="bird-container bird-container--four">
+		<div   class="bird bird--four"></div>
+	</div>
+	<div class="sign_up_form" style="border: 2px solid black; width: 600px; margin-left: 200px; height: 500px;">
+		<h1 style="font-size: 50px; margin-top: -20px; text-align: center; font-family: 'Arima Madurai', cursive;">Sign Up</h1>
+		<p style="font-size: 15px; margin-top: -32px; text-align: center;">Please use your work email address, so we can connect with you in CODEIAL</p>
+		<p style="border-radius: 30px;" id="google_sign_in">
+			<a style="font-size: 23px; text-decoration: none; color: white; margin-top: -3px; margin-left: 5px;" href="/users/auth/google"><i style="font-size: 20px; margin-top: 10px;" class="fa-brands fa-google-plus-g"></i> &nbsp; Sign Up Using Google</a>
+		</p>
+		<br>
+    <hr style="width: 200px; margin-left: 50px; border-top: 1px dashed red;"> 
+	<p style="margin-top: -22px; overflow: hidden; margin-left: 280px;">OR</p>
+	<hr style="width: 200px; margin-left: 340px; margin-top: -32px; border-top: 1px dashed red;">
+	<br>
+<form style="margin-top: -20px;" action="/users/create" method="POST">
+	<p style="font-size: 18px; font-weight: 800;"> &nbsp; Name</p>
+    <input style="margin-left: 200px; margin-top: -38px; width: 300px; height: 30px; border-radius: 25px; text-align: center;" type="text" name="name" placeholder="Your Name" required>
+	<br>
+	<p style="font-size: 18px; font-weight: 800;"> &nbsp; Email</p>
+    <input style="margin-left: 200px; margin-top: -38px; width: 300px; height: 30px; border-radius: 25px; text-align: center;" type="email" name="email" placeholder="Your Email" required>
+	<br>
+	<p style="font-size: 18px; font-weight: 800;"> &nbsp; Password</p>
+    <input style="margin-left: 200px; margin-top: -38px; width: 300px; height: 30px; border-radius: 25px; text-align: center;" type="password" name="password" placeholder="Password" required>
+	<br>
+	<p style="font-size: 18px; font-weight: 800;" > &nbsp; Confirm Password</p>
+    <input style="margin-left: 200px; margin-top: -38px; width: 300px; height: 30px; border-radius: 25px; text-align: center;" type="password" name="confirm_password" placeholder="Confirm Password" required>
+	<br><br>
+    <input style=" margin-left: 150px; width: 300px; height: 30px; background-color: rgba(0, 0, 0, 0.761); cursor: pointer; color: white;" type="submit" value="Sign Up">
+
+</form>	
+	</div>
+
+</div>
+
+
+<!-- .container {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 590px;
+	background-image: linear-gradient(to bottom,  rgba(255,168,76,0.6) 0%,rgba(255,123,13,0.6) 100%), url('https://images.unsplash.com/photo-1446824505046-e43605ffb17f');
+	background-blend-mode: soft-light;
+	background-size: cover;
+	background-position: center center;
+	padding: 2rem;
+}
+
+.bird {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+	will-change: background-position;
+	
+	animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+
+
+}
+#google_sign_in{
+	background-color: #ff2929;
+	width: 280px;
+	height: 40px;
+	margin-left: 160px;
+} -->

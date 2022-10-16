@@ -1,0 +1,145 @@
+<link rel="stylesheet" href="/scss/home.scss">
+<link rel="stylesheet" href="/css/home.css">
+
+
+<br><br><br><br>
+
+
+<div id="home-container">
+    <section id="feed-posts">
+        <h1 style="margin-top: -30px; font-size: 40px; font-weight: 800;"><i style="color: red;" class="fa-solid fa-ghost"></i> &nbsp; Posts</h1>
+        <% if(locals.user){ %>
+            <form action="/posts/create" id="new-post-form" method="POST">
+                <textarea name="content" cols="30" rows="3" placeholder="Type Here..."></textarea>
+                <input id="Submit-Button" type="submit" value="Post">
+            </form>
+            <% } %>
+
+                <div id="posts-list-container">
+                    <ul>
+                        <% for(post of posts){ %>
+                            <li>
+                                <p>
+                                    <% if(locals.user && locals.user.id==post.user.id){ %>
+                                        <small>
+                                            <a href="/posts/destroy/<%= post.id %>"> <i style="color: green;" class="fa-solid fa-trash"></i> </a>
+                                        </small>
+                                        <%}%>
+                                        
+                                            <%= post.content %>
+                                                <br>
+                                                <small>
+                                                    <%= post.user.name %>
+                                                </small>
+                                </p>
+                                <div class="post-comments">
+                                    <% if (locals.user){ %>
+                                        <form action="/comments/create" method="POST">
+                                            <input type="text" name="content" id="place-comment"
+                                                placeholder="Type Here to add comment...">
+                                            <input type="hidden" name="post" value="<%= post._id %>">
+                                            <input type="submit" id="adding-comment" value="Add Comment">
+                                        </form>
+
+                                        <% } %>
+
+                                            <div class="posts-comments-list">
+                                                <ul id="post-comments-<%= post._id %>">
+                                                    <% for(comment of post.comments){ %>
+                                                        <li>
+                                                            <p id="commentss">
+                                                                <% if(locals.user &&( locals.user.id==comment.user.id ||
+                                                                    locals.user.id==post.user.id) ){ %>
+                                                                    <small>
+                                                                        <a
+                                                                            href="/comments/destroy/<%= comment.id %>"> <i style="color: red;" class="fa-solid fa-trash"></i> </a>
+                                                                    </small>
+                                                                    <%}%>
+
+                                                                        <%= comment.content %>
+                                                                            <br>
+                                                                            <small>
+                                                                                <%= comment.user.name %>
+                                                                            </small>
+                                                            </p>
+                                                        </li>
+                                                        <%}%>
+                                                </ul>
+                                            </div>
+                                </div>
+
+                            </li>
+                            <!--hum bas code ko partials means distribute kar rahe hain hum _post.ejs nhi bnake uska saara content idhar likh lete to ek hi baat thi-->
+
+                            <%} %>
+                    </ul>
+                </div>
+    </section>
+    <%- include('_chat_box') -%>
+    <section id="user-friends">
+        <h2 style="" class="friendss">Friends</h2>
+        <% for(u of all_users){%>
+            <p>
+                <a style="text-decoration: none;" href="/users/profile/<%= u.id%>" class="friendss">
+                    <%= u.name%>
+                </a>
+            </p>
+            <%}%>
+    </section>
+</div>
+<script src="https://kit.fontawesome.com/5363396f45.js" crossorigin="anonymous"></script>
+<script src="/js/home_posts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+<script src='/js/chat_engine.js'></script>
+<% if(locals.user){ %>
+<script>
+    new ChatEngine('user-chat-box', '<%= locals.user.email %>');
+</script>
+<%}%>
+<script>
+    const element = document.getElementById("Submit-Button");
+    element.addEventListener("click",() => {
+        alert('ThankYou for Posting on our website!😊😊 If you are not able to see your post kindly refresh the browser');
+    });
+</script>
+
+
+<!--body {
+  background-color: lightgray; }
+
+#commentss {
+  color: blue; }
+
+#comments-section {
+  color: red; }
+
+#place-comment {
+  width: 300px;
+  height: 40px; }
+
+#adding-comment {
+  background-color: black;
+  color: white;
+  height: 25px;
+  width: 110px;
+  border-radius: 20px 20px;
+  cursor: pointer; }
+
+#home-container {
+  display: flex; }
+
+#feed-posts {
+  width: 70%;
+  padding: 10px; }
+
+#user-friends {
+  width: 30%;
+  margin-left: 390px;
+  text-align: center;
+  margin-right: -100px;
+  height: 950px;
+  margin-top: -90px; }
+
+.friendss {
+  margin-left: -100px; }
+-->

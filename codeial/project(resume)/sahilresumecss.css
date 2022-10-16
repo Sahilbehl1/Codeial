@@ -1,0 +1,616 @@
+html{
+    height: 5000px;
+}
+body{
+    margin: 0px;/*always do this*/
+}
+#header{
+    background-image: url('backg.jpg');
+    height: 600px;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.list{
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+}
+.list li{
+    display: inline-block;
+    margin: 0px 10px;
+    font-size: larger;
+    padding: 0px 20px;
+}
+.list li a{
+    color: black;
+    text-decoration: none;
+    transition: background-color 5s;
+    font-size: 20px;
+    transition: 10s ease-in-out;
+}
+.list li:hover{
+    text-decoration: underline;
+    background-color: chartreuse;
+    transform-origin: bottom;
+    transition: 2s ease-in-out;
+    font-size: 70px;
+}
+#name{
+    text-align: center;
+    color: white;
+    margin: 130px 5px;
+    font-size: 30px;
+    color: black;
+    /* background-color: white; */
+    transition: 2s ease-in-out;
+}
+#name:hover{
+    color: red;
+}
+#linkedin{
+    margin: -314px 300px;
+    padding: 200px 200px;
+}
+#stack{
+    margin: 76px 610px;
+}
+.socialicons li a i{/*USKO PURA PATH DO KI KISME PADDING KARU IMPORTANT HAIN*/
+        padding: 3px;
+        color: blue;
+        opacity: 0.6;
+        font-size: 30px;
+        border-radius: 50%;
+}
+/*Apply these skills of media screen everywhere its important*/
+@media screen and (max-width = 600px){
+    .list li a{
+        font-size: 10px !important;
+        color: blue !important; 
+    }
+}
+.socialicons li a i:hover{
+    box-shadow: 0px 0px 9px 10px red;/*5 inputs 
+    1-)  horizontal offset agar +ve value to shadow mostly right ko hogi and if -ve value to mostly left ko
+    2-) vertical offset same as upar vaala right ki jagah bottom and left ki jagah up
+    3-)  kitna blur tum chate hi
+    4-) kitna dark
+    5-)color*/
+    transition: 1s ease-in-out;
+}
+#google{
+    margin: -132px 690px;
+    padding: 20px 20px;
+}
+#facebook{
+    margin: 75px 800px;
+}
+
+/*Image*/
+.myimage{
+    height: auto;
+    width: 100%;
+    position: relative;/*MERI IMAGE BACKGROUND KE PICHE AA RHI THI VAISE AB SHI AA RAHI HAIN SO I USE POSITION TO RELATIVE*/
+}
+.myimage{
+    margin: 10px 100px;
+    opacity: 100;
+    margin: auto;
+    margin-top: -8vh;
+    margin-left: 100px;
+}
+.myimage img{
+    height: 19%;
+    width: 19%;
+    border-radius: 50%;
+    margin: -120px 450px;
+    box-shadow: 0px 0px 14px 10px lightgray;
+}
+.myimage img:hover{
+    box-shadow: 0px 0px 10px 10px red;
+    transition: 2s ease-in-out;
+    
+}
+#about{
+    margin: 150px 10px;
+    font-size: 25px;
+    line-height: 35px;
+}
+#about:hover{
+    transition: 4s ease-in-out;
+}
+#aboutme{
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+    margin: auto;
+}
+#aboutme:hover{
+    font-size: 80px;
+    transition: 2s ease-in-out;
+}
+section{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+}
+section :nth-child(2n+5){
+    background-color: grey;
+}
+#skills{
+    background-color: lightgray;
+    opacity: 0.9;
+}
+#skills:hover{
+    transition: 2s ease-in-out;
+    /* background-image: linear-gradient(red,aqua,blue); */
+}
+.skillsheading{
+    margin:auto;
+    font-size: 60px;
+}
+.skillsheading span{
+    color: blue;
+}
+.skillsheading:hover{
+    color: red;
+    transition: 3s ease-in-out;
+}
+.size{
+    font-size: 25px;
+    margin-left: 20px;
+}
+.sizeone{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.skillsbar{
+    margin: 200px 20px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;/*used ki agar mein inspect karke chota bhi karu to saara kuch display ho*/
+    justify-content: space-between;
+}
+.skillprogress{
+    width: 120px;
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+    margin-left: 100px;
+    font-size: 30px;
+    border-radius: 20px 20px;
+    margin-top: -105px;
+}
+.eightypercent{
+    height: 30px;
+    width: 80%;
+    background-color: greenyellow;
+}
+.skillprogressone{
+    width: 120px;
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+    margin-right: 600px;
+    font-size: 30px;
+    border-radius: 20px 20px;
+    margin-top: -105px;
+}
+.ninetypercent{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(255, 65, 65);
+    margin-right: 200px;
+}
+.skillprogressthree{
+    width: 120px;
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+    margin-left: 480px;
+    font-size: 30px;
+    border-radius: 20px 20px;
+    margin-top: 50px;
+
+}
+.eightyfivepercent{
+    height: 30px;
+    width: 85%;
+    background-color: rgb(119, 119, 248);
+}
+.skillprogressfour{
+    width: 120px;
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+    margin-right: 300px;
+    margin-left: 400px;
+    font-size: 30px;
+    margin-top: -184px;
+    border-radius: 20px 20px;
+}
+.fiftypercent{
+    height: 30px;
+    width: 50%;
+    background-color: orange;
+    font-size: 25px;
+}
+.skillprogressfive{
+    width: 120px;
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px 20px;
+    margin-right: -350px;
+    margin-bottom: 20000px;
+    margin-top: -184px;
+}
+.tenpercent{
+    height: 30px;
+    width: 70%;
+    background-color: fuchsia;
+    font-size: 25px;
+}
+.skillprogresssix{
+    background-color: gray;
+    height: 30px;
+    width: 120px;
+    margin-right: 490px;
+    margin-top: -35px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+.seventyfivepercent{
+    height: 30px;
+    width: 75%;
+    background-color: yellow;
+}
+.workexperience{
+    font-size: 40px;
+    text-align: center;
+}
+
+.workexperience::first-letter{
+    text-transform: capitalize;
+}
+.timeline{
+    position: relative;
+    width: 75%;
+    /* border: 2px solid black; */
+    margin-left: 150px;
+}
+.timelinebox{
+    position: relative;
+    width: 40%;
+    margin: 10px;
+    left: 5%;
+    min-height: 200px;
+    /* border: 2px solid black; */
+}
+.timelinebox:nth-child(2n){
+    left: 53%;
+}
+.timelinedivider{
+    position: absolute;
+    height: 75%;
+    width: 0;
+    border: 2px dashed red;
+    top: 10%;
+    left: 50%;
+}
+/*this is only for work experience*/
+@media screen and (max-width:600px){
+    .timelinedivider{ /*for divider*/
+        left: 8%;
+    }
+    .timelinebox{/*for boxes*/
+        left: 12%;/*This is very important and no other rule can replace it*/
+        width: 80%;
+    }
+    .timelinebox:nth-child(2n):after{/*for dots*/
+        left: -59% !important; /*important matlab ye vaali baat maanni hain baaki nhi*/
+    }
+    .timelinebox:nth-child(2n+1)::after{
+        left: -9% !important;
+    }  
+    html{
+        font-size: 15px;
+    }
+
+}
+.timelinetraveller{
+    font-size: 30px;
+    position: sticky;
+    top: 20%;/*ye mention karne se hi vo move karega*/
+}
+.timelinebox:nth-child(2n):after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 37%;
+    left: -10.5%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: black;
+    z-index: 1;
+}
+.timelinebox:nth-child(2n+1)::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    right: -11%;
+    top: 37%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: black;
+    z-index: 1;/*as dots line ke niche aa rahe the*/
+}
+#bhutexperience{
+    color: blue;
+}
+#headings{
+    font-size: 35px;
+   margin-left: 200px;
+   color: blue;
+}
+#headings::before{
+    content: '';
+    background-image: url('ieee.jpg');
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 90px;
+    width: 90px;
+    float: left;
+}
+.introieee{
+    float: right;
+    margin-right: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color: orange;
+}
+#ieeensut{
+    background-color: white;    
+}
+#headingstwo{
+    font-size: 35px;
+   margin-left: 200px;
+   color: blue;
+}
+#headingstwo::before{
+    content: '';
+    background-image: url('nssnsut.jpg');
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 90px;
+    width: 90px;
+    float: left;
+}
+#headingsthree{
+    font-size: 30px;
+   margin-left: 110px;
+   color: blue;
+}
+#headingsthree::before{
+    content: '';
+    background-image: url('educationpoint.jpg');
+    background-repeat: no-repeat;
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 200px;
+    width: 140px;
+    float: left;
+}
+.intropoint{
+    color: orange;
+    float: right;
+    font-size: 22px;
+}
+#education{
+    float: left;
+    margin-top: -100px;
+    margin-left: 10px;
+    background-color: white;
+}
+#Hobbies{
+    background-color: lightgrey;
+}
+#hobbies{
+    background-color: lightgray;
+    opacity: 0.9;
+}
+.hobbiesheading{
+    font-size: 50px;
+    color: blue;
+    margin-left: 500px;
+}
+.hobbiesheading:hover{
+    transition: 2s ease-in-out;
+}
+.starthobby{
+    height: 400px;
+}
+#hobby1{
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    color: black;
+    margin-left: 90px;
+    margin-top: 50px;
+    background-color: aqua;
+}
+#hobbies:hover{
+    transition: 5s ease-in-out;
+}
+#hobby1::before{
+    content: '';
+    background-image: url('bat.jpg');
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    float: left;
+}
+#hobby2{
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    color: black;
+    margin-left: 100px;
+    margin-top: 70px;
+    background-color: rgb(250, 186, 67);
+
+}
+#hobby2::before{
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#coding{
+    width: 130px;
+    height: 100px;
+    margin-left: -30px;
+    margin-top: -80px;
+}
+#hobby3{
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    color: black;
+    margin-left: 550px;
+    margin-top: -80px;
+    background-color: aqua;
+}
+#hobby3::before{
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    float: left;
+}
+#webdev{
+    height: 100px;
+    width: 120px;
+    margin-top: -80px;
+    margin-left: -10px;
+}
+#hobby4{
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    color: black;
+    margin-left: 550px;
+    margin-top: -250px;
+    background-color: rgb(250, 186, 67);
+
+}
+#hobby4::before{
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    float: left;
+}
+#imagetravel{
+    width: 100px;
+    height: 100px;
+    margin-left: 350px;
+    margin-top: -100px;
+}
+#hobby5{
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    color: black;
+    margin-left: 1000px;
+    margin-top: -350px;
+    background-color: aqua;
+
+}
+#hobby5::before{
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    float: left;
+}
+#footballtravel{
+    width: 100px;
+    height: 100px;
+    margin-left: 990px;
+    margin-top: -90px;
+}
+#hobby6{
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    color: black;
+    margin-left: 1000px;
+    margin-top: 70px;
+    background-color: rgb(250, 186, 67);
+
+}
+#hobby6::before{
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    float: left;
+}
+#eatingtravel{
+    width: 130px;
+    height: 100px;
+    margin-left: 1000px;
+    margin-top: -80px;
+}
+#headingstwonew{
+   font-size: 30px;
+   margin-left: 70px;
+   color: blue;
+}
+#headingstwonew::before{
+    content: '';
+    background-image: url('manav.jpg');
+    background-repeat: no-repeat;
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 90px;
+    width: 90px;
+    float: left;
+}
+#headingsonenew{
+    font-size: 25px;
+   margin-left: 70px;
+   color: blue;
+}
+#headingsonenew::before{
+    content: '';
+    background-image: url('nsut.jpg');
+    background-repeat: no-repeat;
+    display: inline-block;/*this is very important to get the image*/
+    background-size: contain;
+    height: 90px;
+    width: 90px;
+    float: left;
+}
+
+
+
+
+
+
+

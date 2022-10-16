@@ -1,0 +1,86 @@
+body{
+    background-color: lightgray;
+}
+#commentss{
+    color: blue;
+}
+#comments-section{
+    color: red;
+}
+#place-comment{
+    width: 300px;
+    height: 40px;
+}
+#adding-comment{
+    background-color: black;
+    color: white;
+    height: 25px;
+    width: 110px;
+    border-radius: 20px 20px;
+    cursor: pointer;
+}
+#home-container{
+    display: flex;
+}
+#feed-posts{
+    width: 70%;
+    padding: 10px;
+}
+
+#user-friends{
+    width: 30%;
+    // text-align: center;
+    margin-left: 390px;
+    text-align: center;
+    margin-right: -100px;
+    height: 950px;
+    margin-top: -90px;
+}
+.friendss{
+    margin-left: -100px;
+}
+// .hero{
+//     display: flex;
+// }
+// .hero .static-txt{
+//     color: #ffff;
+//     font-size: 60px;
+//     font-weight: 400;
+// }
+// .hero .dynamic-txts{
+//     margin-left: 15px;
+//     height: 90px;
+//     line-height: 90px;
+//     overflow: hidden;
+// }
+// .dynamic-txts li{
+//     list-style: none;
+//     color: #16f37d;
+//     font-size: 60px;
+//     font-weight: 500;
+//     position: relative;
+//     top: 0;
+//     animation: slide 24s steps(6) infinite;
+// }
+// @keyframes slide {
+//     100%{
+//         top: -360px;
+//     }
+// }
+// .dynamic-txts li span{
+//     position: relative;
+//     margin: 5px 0;
+//     line-height: 90px;
+// }
+// .dynamic-txts li span::after{
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     border-left: 2px solid #16f37d;
+//     animation: typing 4s steps(10) infinite;
+// }
+// @keyframes typing {
+//     left: calc(100% + 30px);
+// }

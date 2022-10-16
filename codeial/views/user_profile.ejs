@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+<div class="wrapper">
+
+    <div style=" width: 350px; margin-left: 350px; margin-top: 120px; height: 400px; background: linear-gradient(to right, #01a9ac,#01dbdf);"
+        class="left">
+        <img style="margin-top: 80px; height: 200px; width: 200px; margin-left: 20px;" src="<%= user.avatar %>"
+            alt="<%= user.name %>" width="100">
+
+        <!--updating the user data-->
+        <% if(user.id==profile_user.id){ %>
+            <!-- <h2 style="">Your Previous Info</h2> -->
+            <!-- <p>Name:</p> -->
+            <p style=" width: 90px; margin-top: -5px; margin-left: 70px; background-color: black; color: white;"
+                class="username">
+                <%= profile_user.name %>
+            </p>
+
+    </div>
+    <div class="right">
+        <div style="margin-left: 600px; margin-top: -400px; border: 2px solid black; width: 250px; height: 400px; text-align: center; color: white; background-color: black;"
+            class="projects">
+            <h3 style="margin-top: 100px;">INFORMATION</h3>
+            <div class="projects_data">
+                <div class="data">
+                    <p>Email:</p>
+                    <p class="username">
+                        <%= profile_user.email %>
+                    </p>
+                    <!--if user matches then show the form-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-most">
+        <div style="border: 2px solid #01a9ac; width: 250; height: 400px; margin-left: 854px; margin-top: -404px; background: linear-gradient(to right, #01a9ac,#01dbdf); text-align: center;"
+            class="right-most-div">
+            <p style="margin-top:100px; font-weight: 700;">Change Your Login Info.</p>
+            <p style="font-size: 15px; margin-left: -140px;">Updated Name:</p>
+            <form action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="post">
+                <input style="margin-top: -10px; margin-left: -50px; width: 190px;" type="name" name="name"
+                    placeholder="Your Updated Name" value="<%= profile_user.name %>" required>
+                <p style="font-size: 15px; margin-left: -140px; margin-top: 4px;">Updated Email:</p>
+                <input style="margin-top: -10px; margin-left: -50px; width: 190px;" type="email" name="email"
+                    placeholder="Your Updated Email" value="<%= profile_user.email %>" required>
+
+                <p style="font-size: 15px; margin-top: 20px; margin-left: -40px;">Choose Your Avatar/Profile Pic:</p>
+                <input style="margin-left: 20px;  " type="file" name="avatar" placeholder="Profile Pic..">
+                <input
+                    style="margin-top: 20px; width: 180px; background-color: rgba(0, 0, 0, 0.775); color: white; font-weight: 800; cursor: pointer;"
+                    type="submit" value="Update" id="">
+            </form>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+</div>
+
+
+
+
+
+<%}else{%>
+    <!--esle show only the profile info -->
+    <div  class="someone-ids">
+        <div style="margin-top: -200px;  margin-left: 250px; background: linear-gradient(to right, #01a9ac,#01dbdf); " class="someone-id">
+            <p style="margin-top: -20px; margin-left: 80px; font-size: 30px;">Name:</p>
+            <p style="margin-left: 190px; margin-top: -65px; font-size: 30px; width: 500px;" class="username">
+                <%= profile_user.name %>
+            </p>
+            <br><br><br><br>
+            <p style="margin-top: -20px; margin-left: 80px; font-size: 30px;" >Email:</p>
+            <p style="margin-left: 190px; margin-top: -65px; font-size: 30px;" class="username">
+                <%= profile_user.email %>
+            </p>
+            <%}%>
+        </div>
+    </div>

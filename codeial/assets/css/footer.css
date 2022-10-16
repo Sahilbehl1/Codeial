@@ -1,0 +1,61 @@
+#layout-footer {
+  color: white;
+  /* margin-top: 62vh; */
+  background: black;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: flex-start; }
+  #layout-footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px; }
+  #layout-footer .footer-nav ul {
+    list-style: none; }
+  #layout-footer p {
+    font-size: 20px; }
+    .icons{
+      display: flex;
+      column-gap: 25px;
+    }
+    .icon{
+      width: 50px;
+      height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 26px;
+      color: #fff;
+      border-radius: 50%;
+      outline: 2px solid #fff;
+      transition-property: outline-offset, outline-color, background-color ;
+      transition-duration: .25s;
+    }
+    .icon:hover{
+      outline-offset: 4px;
+    }
+    .icon:hover i{
+      animation: shake .25s;
+    }
+    .icon--instagram:hover{
+      background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      outline-color: #a02d76;
+    }
+    .icon--profile:hover{
+      background-color: red;
+      outline-color: red;
+    }
+    .icon--linkedin:hover{
+      background-color: #0077b5;
+      outline-color: #0077b5;
+    }
+    .icon--music:hover{
+      background-color: #2ea44f;
+      outline-color: #2ea44f;
+    }
+    @keyframes shake {
+      10%{ transform: rotate(15deg);}
+      20%{ transform: rotate(-15deg);}
+      30%{ transform: rotate(15deg);}
+      40%{ transform: rotate(-15deg);}
+    }
